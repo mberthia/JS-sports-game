@@ -5,6 +5,7 @@ let shootButton2 = document.querySelector("#teamtwo-shoot-button");
 let team2Goals = document.querySelector("#teamtwonumgoals");
 let resetButton = document.querySelector("#reset-button");
 let resetNum = document.querySelector("#numresets");
+let swish = document.querySelector("#sound");
 
 shootButton1.addEventListener("click", function () {
   console.log("team 1 button clicked");
@@ -14,6 +15,7 @@ shootButton1.addEventListener("click", function () {
   if (g < 0.5) {
     let team1Goals = Number(teamonenumgoals.innerHTML) + 1;
     teamonenumgoals.innerHTML = team1Goals;
+    swish.play();
   }
 });
 
@@ -25,6 +27,7 @@ shootButton2.addEventListener("click", function () {
   if (g < 0.5) {
     let team2Goals = Number(teamtwonumgoals.innerHTML) + 1;
     teamtwonumgoals.innerHTML = team2Goals;
+    swish.play();
   }
 });
 
